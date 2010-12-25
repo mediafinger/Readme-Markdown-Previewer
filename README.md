@@ -1,17 +1,16 @@
 Readme Markdown Previewer
 ====
-Readme Markdown Previewer allows you to quickly and easily preview your README.md using GitHub's styles. The page simply loads the readme.md file, converts it using a Showdown script that has been modified for github flavored markdown, then previews it in a dummy GitHub project page.
+Readme Markdown Previewer allows you to quickly and easily preview your README.md. The preview.html loads the readme.md file, converts it using a showdown.js (modified for github flavored markdown), then loads it. The preview.html is a stripped down version of the a GitHub project page so it has the correct look and feel.
 
 #### Usage
 
 Simply download 'preview.html' to the root of your project and point your browser to preview.html. The script will load "readme.md" and preview it.
 
 #### To-Do
-Modify script to accept filename/path and interval parameters.
-
+Modify script to accept filename and interval parameters.
 
 #### Test Markdown
-Teat Markdown copied from
+The Markdown copied from
 http://github.github.com/github-flavored-markdown/preview.html
 
 #### Underscores

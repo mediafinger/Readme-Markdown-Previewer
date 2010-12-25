@@ -9,8 +9,10 @@ Simply download 'preview.html' to the root of your project and point your browse
 #### To-Do
 Modify script to accept filename and interval parameters.
 
-#### Test Markdown
-The Markdown copied from
+Test Markdown
+====
+The following markdown copied from:
+
 http://github.github.com/github-flavored-markdown/preview.html
 
 #### Underscores

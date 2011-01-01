@@ -16,8 +16,21 @@
 
     <script src="https://assets2.github.com/javascripts/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
     <script src="https://assets3.github.com/javascripts/bundle_common.js" type="text/javascript"></script>
-    <script src="http://github.github.com/github-flavored-markdown/scripts/showdown.js" type="text/javascript"></script>
+    <!--<script src="http://github.github.com/github-flavored-markdown/scripts/showdown.js" type="text/javascript"></script>-->
+    <!--<script src="http://attacklab.net/showdown/showdown.js" type="text/javascript"></script>-->
+    <script src="https://github.com/coreyti/showdown/raw/master/src/showdown.js" type="text/javascript"></script>
     <script type="text/javascript">
+
+        (function() {
+            var arr = decodeURIComponent(window.location.search.substr(1)).replace(/\+/g," ").split('&'), p;
+            window.location.query = {};
+            for (var i = 0; i < arr.length; i++) {
+                p = arr[i].split('=');
+                window.location.query[p[0]] = p[1];
+            }
+        })();
+
+
         $(function() {
 
             var converter = new Showdown.converter();
@@ -25,7 +38,7 @@
             setInterval(function loader(delay) {
                 $.ajax({
                     type: 'get',
-                    url:'readme.markdown',
+                    url: window.location.query['readme'] || 'readme.md',
                     datatype: 'text',
                     cache: false,
                     success: function(txt) {
